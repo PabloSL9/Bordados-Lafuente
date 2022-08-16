@@ -5,7 +5,7 @@
 }
 
 body{
-    background-image: url(../img/fondo\ Saranghae.jpg);
+    background-image: linear-gradient(to left, pink, whitesmoke);
     font-family: 'Roboto', sans-serif;
 }
 
@@ -36,6 +36,13 @@ header nav ul li{
     border-radius: 25px;
     font-weight: bold;
     font-size: 0.7rem;
+}
+
+header nav ul li:hover{
+    background-color: rgb(241, 188, 197);
+    transform: rotate(10deg);
+    box-shadow: 1px 1px 10px black;
+    border-radius: 50px;
 }
 
 .footer{
@@ -99,6 +106,47 @@ header nav ul li{
 
 h2{
     text-align: center;
+}
+
+div{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: "sanji-enamorado sanji";
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+}
+
+.sanji{
+    
+}
+.mover{
+    grid-area: sanji-enamorado;
+    max-width: 30rem;
+    max-height: 30rem;
+}
+.mover:hover{
+    transform: rotate(335deg);
+}
+.aparecer{
+    grid-area: sanji;
+    max-width: 20rem;
+    max-height: 20rem;
+    animation-name: aparecer;
+    animation-duration: 50s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes aparecer{
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(2);
+    }
 }
 
 footer{
